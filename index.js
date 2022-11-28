@@ -1,3 +1,5 @@
+// TODO: BASKET and RATING
+
 require('dotenv').config()
 const express = require("express")
 const sequilize = require("./db")
