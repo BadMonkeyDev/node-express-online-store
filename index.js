@@ -1,4 +1,6 @@
 // TODO: BASKET and RATING
+// TODO: remove middleware double code(separate logic for auth and role checking)
+// TODO: add device deleting
 
 require('dotenv').config()
 const express = require("express")
