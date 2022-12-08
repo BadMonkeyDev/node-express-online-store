@@ -61,6 +61,23 @@ class DeviceController {
         return res.json(device)
     }
 
+    async getArray(req, res, next) {
+        try {
+            let {ids} = req.body
+            let devices;
+
+            devices = await Device.findAndCountAll({
+                where:{
+                    id: ids
+                }
+            })
+
+            return res.json(devices)
+        } catch (e) {
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
     async delete(req, res) {
 
     }
